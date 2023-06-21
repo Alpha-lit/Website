@@ -1,0 +1,515 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PowerUp Association</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="google-site-verification" content="eP1buL5WStdqjw8tSEZjjSW5mpUfDEyG9QFgEQMiebM" />
+    <meta name="keywords"  content="PowerUp Association, Web Development, business development, IT Services, PowerUp, Power Up">
+    <meta name="description" content="PowerUp Association - is your IT solution provider that helps your business grow and prosper.">
+    <meta name="author" content="PowerUp Association">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://powerupassociation.com">
+    <meta property="og:site_name" content="PowerUp Association">
+    <meta property="og:description" content="PowerUp Association - is your IT solution provider that helps your business grow and prosper.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    
+    <!--Loader css-->
+    <link rel="stylesheet" href="{% static 'css/loader.css' %}">
+</head>
+<style>
+        .gr {
+            text-align: center;
+            font-size: large;
+            margin-top: 10px;
+            margin-bottom: 60px;
+            margin-left: 225px;
+            user-select: none;
+        }
+        .ge {
+            text-align: center;
+            font-size: large;
+            margin-bottom: 7px;
+            margin-left: 100px;
+            user-select: none;
+        }
+        
+    </style>
+<body>
+    <!--Loader-->
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar p-0">
+        <div class="container-lg p-0">
+            <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
+            <div class="ge p-0 text-white d-lg-none">
+                    <a>بسم الله الرحمن الرحيم
+                    </a>
+                </div>
+                <a href="{% url 'Home' %}" class="navbar-brand">
+                    <h1 class="m-0 text-white display-4"><span class="text-primary">P</span>ower<span class="text-primary">U</span>p</h1>
+                    <!-- <h1 class="m-0 text-white display-7"><span class="text-primary">Association</span></h1> -->
+                </a>
+                <div class="gr p-0 text-white d-lg-flex d-none">
+                    <a>بسم الله الرحمن الرحيم
+                    </a>
+                </div>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="{% url 'Home' %}" class="nav-item nav-link active">Home</a>
+                        <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
+                        <a href="{% url 'services' %}" class="nav-item nav-link">Services</a>
+                        <!-- <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu border-0 rounded-0 m-0">
+                                <a href="/src/templates/blog.html" class="dropdown-item">Blog Grid</a>
+                                <a href="/src/templates/single.html" class="dropdown-item">Blog Detail</a>
+                            </div>
+                        </div> -->
+                        <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container p-0 mb-5" style="max-width:100%;">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#header-carousel" data-slide-to="1"></li>
+                <li data-target="#header-carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active lol">
+                    <img  class="img-fluid " src="{% static 'img/c1.png' %}" alt="Image">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-md-3"></h5>
+                            <h1 class="display-3 text-white mb-md-4"><span class="text-primary">PowerUp</span> With <span class="text-primary">Digital</span> Solutions</h1>
+                            <a href="{% url 'services' %}" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item lol">
+                    <img class="img-fluid" src="{% static 'img/design_31.png' %}" alt="Image">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-md-3"></h5>
+                            <h1 class="display-3 text-white mb-md-4">We <span class="text-primary">PowerUp</span> Business To The Next <span class="text-primary">Level</span></h1>
+                            <a href="{% url 'services' %}" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item lol">
+                    <img style="object-fit:fill;" class="img-fluid " src="{% static 'img/design_28.png' %}" alt="Image">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-md-3"></h5>
+                            <h1 class="display-3 text-white mb-md-4">Explore <span class="text-primary">Reliable</span>   Services With <span class="text-primary">PowerUp</span>  Association </h1>
+                            <a href="{% url 'services' %}" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+    <style>
+      .img-fluid {
+        width: 100%;
+        height: auto;
+      }
+        /* width */
+        ::-webkit-scrollbar {
+          width: 5px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+          
+          border-radius: 2px;
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #FDAC53; 
+          border-radius: 2px;
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #b30000; 
+        }
+      </style>
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center pb-1">
+                <div class="col-lg-5">
+                    <img class="img-thumbnail p-3" src="{% static 'img/POWERUp_2.png' %}" alt="">
+                </div>
+                <div class="col-lg-7 mt-5 mt-lg-0">
+                    <small class="bg-primary text-white text-uppercase font-weight-bold px-1">Who We Are</small>
+                    <h1 class="mt-2 mb-4">Information Technology Company That Helps Businesses Go Digital</h1>
+                    <p class="mb-4">PowerUp Association is an Information Technology company which provides services that helps businesses develop and prosper. We offer a wide range of IT services from website development, mobile application development, to system design and development. Our solutions are tailored to meet the specific needs of each business. So you can focus on what you do best. We believe the importance of IT in today's business world, and we're dedicated to providing our clients with digital solutions that make them more successful. Let us show you how we PowerUp your business.</p>
+                    <a href="{% url 'about' %}" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold">Read More</a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center border mb-4 mb-lg-0 p-4" style="height: 120px;">
+                        <i class="fa fa-2x fa-comments text-primary mr-3"></i>
+                        <div class="d-flex flex-column">
+                            <h5 class="font-weight-bold">Lets Chat</h5>
+                            <a href="{% url 'contact' %}" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center border mb-4 mb-lg-0 p-4" style="height: 120px;">
+                        <i class="fa fa-2x fa-envelope-open text-primary mr-3"></i>
+                        <div class="d-flex flex-column">
+                            <h5 class="font-weight-bold">Email Us</h5>
+                            <a class="text-dark" href="emailto:info@powerupassociation.com"><p class="m-0">info@powerupassociation.com</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center border mb-4 mb-lg-0 p-4" style="height: 120px;">
+                        <i class="fas fa-2x fa-phone-alt text-primary mr-3"></i>
+                        <div class="d-flex flex-column">
+                            <h5 class="font-weight-bold">Call Us</h5>
+                            <a class="text-dark" href="tel:+252 610 821857"><p class="m-0">+252 610 821857</p></a>
+                            <a class="text-dark" href="tel:+971 544 384638"><p class="m-0">+971 544 384638</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Services Start -->
+    <div class="container-fluid pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5">
+                    <small class="bg-primary text-white text-uppercase font-weight-bold px-1">What we do</small>
+                    <h1 class="mt-2 mb-3">PowerUp With Our Services</h1>
+                    <h4 class="font-weight-normal text-muted mb-4">we provide a broad range of IT services, From creation of websites and mobile applications to the design and development of systems.</h4>
+                    <a href="{% url 'services' %}" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold">Discover More</a>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6 mb-5">
+                            <div class="d-flex">
+                                <i class="fa fa-3x fa-laptop-code text-primary mr-4"></i>
+                                <div class="d-flex flex-column">
+                                    <h4 class="font-weight-bold mb-3">Web Design & Development</h4>
+                                    <p>We design and develop modern websites tailored specifically for you. Based on your business needs and goals, we will help you get the most out of your website.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-5">
+                            <div class="d-flex">
+                                <i class="fa fa-3x fa-mobile text-primary mr-4"></i>
+                                <div class="d-flex flex-column">
+                                    <h4 class="font-weight-bold mb-3">Mobile Application Development</h4>
+                                    <p>Mobile application design and development services for different mobile platforms. With our help, you can get your idea come to life into a fully functional modern mobile application with a great user experience.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-5">
+                            <div class="d-flex">
+                                <i class="fa fa-3x fa-cogs text-primary mr-4"></i>
+                                <div class="d-flex flex-column">
+                                    <h4 class="font-weight-bold mb-3">Management Systems</h4>
+                                    <p>We allow clients to maximize output, streamline operations and optimize processes via web-based Management Systems.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-5">
+                            <div class="d-flex">
+                                <i class="fa fa-3x fa-cart-plus text-primary mr-4"></i>
+                                <div class="d-flex flex-column">
+                                    <h4 class="font-weight-bold mb-3">E-Commerce</h4>
+                                    <p>We build E-Commerce website to facilitate your business to sell products online, in the digital marketplace.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+   
+    <style>
+        .ll{
+            visibility: hidden;
+        }
+        video {
+            object-fit: contain;
+        }
+    </style>
+
+    
+    
+    <!-- Testimonial Start -->
+<div class="container-fluid mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-5">
+                <small class="bg-primary text-white text-uppercase font-weight-bold px-1">What clients say</small>
+                <h1 class="mt-2 mb-3">Clients Say About Our Services</h1>
+                <h4 class="font-weight-normal text-muted mb-4">Hear what our satisfied clients have to say about their experiences with us</h4>            </div>
+            <div class="col-lg-8 mb-5">
+                <div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-text position-relative border mb-4 h-100 shadow-lg" style="padding: 25px 30px;">
+                            <video src="{% static 'video/clip.mp4' %}" controls width="100%" height="auto" controlsList="nodownload" playsinline ></video>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid rounded-circle" src="{% static 'video/Capture.png' %}" style="width: 80px; height: 80px;" alt="Image">
+                            <div class="pl-4">
+                                <h6 class="font-weight-bold"></h6>
+                                <i class="text-muted">No Pain Dental Clinic</i>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+<style>
+  .smo {
+    padding: 7px 13px;
+    border-radius: 8px;
+}
+  .so {
+    border-radius: 8px;
+}
+</style>
+<!-- Latest Project Start -->
+<section id="latest-project" class="py-5">
+    <div class="container">
+      <h2 class="text-center font-weight-bold mb-4 text-uppercase">Our Latest Project</h2>
+      <p class="text-center text-muted mb-5">Check out our most recent project and see how we've helped businesses just like yours</p>
+      <div class="row justify-content-center">
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 shadow-lg">
+            <img class="card-img-top" src="{% static 'img/s1.PNG' %}">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold text-uppercase">CLINIC MANAGEMENT SYSTEM</h5>
+              <p class="card-text text-muted">Are you tired of manually managing your clinic's appointments, patient records, and billing? Say goodbye to the hassle with our Clinic Management System! Our user-friendly platform allows you to easily schedule appointments, track patient history, and process payments all in one place. With our system, you'll be able to streamline your clinic's operations and provide better care to your patients. Plus, our advanced security features ensure the confidentiality of your patient data. Try our Clinic Management System today and experience the convenience of modern technology!</p>
+              <a href="{% url 'details' %}" class="btn btn-primary btn-sm mt-4 smo">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Latest Project End -->
+    <!-- Contact Start -->
+    <!-- <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center">
+                <small class="bg-primary text-white text-uppercase font-weight-bold text-center px-1">Get In Touch</small>
+                <h1 class="mt-2 mb-5">Contact For Any Queries</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="d-flex align-items-center border mb-3 p-4">
+                        <i class="fa fa-2x fa-envelope-open text-primary mr-3"></i>
+                        <div class="d-flex flex-column">
+                            <h5 class="font-weight-bold">Email Us</h5>
+                            <a class="text-dark" href="emailto:info@powerupassociation.com"><p class="m-0">info@powerupassociation.com</p></a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border mb-3 mb-md-0 p-4">
+                        <i class="fas fa-2x fa-phone-alt text-primary mr-3"></i>
+                        <div class="d-flex flex-column">
+                            <h5 class="font-weight-bold">Call Us</h5>
+                            <a class="text-dark" href="tel:+252 610 821857"><p class="m-0">+252 610 821857</p></a>
+                            <a class="text-dark" href="tel:+971 544 384638"><p class="m-0">+971 544 384638</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="contact-form">
+                        <div id="success"></div>
+                        <form method="post" name="myForm" id="contactForm" novalidate="novalidate" onsubmit="return validateForm()"> {% csrf_token %}
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="control-group" name="subject">
+                                        {{ form.name | as_crispy_field}}
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="control-group">
+                                        {{ form.email | as_crispy_field }}
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                {{ form.subject | as_crispy_field }}
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                {{ form.message | as_crispy_field }}
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <script src='https://www.google.com/recaptcha/api.js'></script>
+                            <div class="g-recaptcha" data-sitekey="6Ldd2JkhAAAAAKRbaSHGfMvcF913zmVqCdWx2nGU"></div>
+                             <input type="hidden" name="recaptcha" data-rule-recaptcha="true">
+                            <div>
+                                <button class="btn btn-primary font-weight-semi-bold px-4 so" style="height: 50px;" type="submit" id="sendMessageButton">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Contact End -->
+  <script>
+    function validateForm() {	
+        var recaptcha = document.forms["myForm"]["g-recaptcha-response"].value;
+        if (recaptcha == "") {
+            alert("Please fill reCAPTCHA");
+            return false;
+        }
+    }
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white mt-5 pt-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="{% url 'Home' %}" class="navbar-brand">
+                    <h1 class="m-0 mt-n2 text-white display-4"><span class="text-primary">P</span>ower<span class="text-primary">U</span>p</h1>
+                    <h1 class="m-0 text-white display-7"><span class="text-primary">Association</span></h1>
+                </a>
+                <p>PowerUp Association is your IT solution provider that helps your business grow and prosper.</p>
+                <!-- <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+                </div> -->
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="font-weight-bold text-primary mb-4">Quick Links</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="{% url 'Home' %}"><i class="fa fa-angle-right text-primary mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right text-primary mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="{% url 'services' %}"><i class="fa fa-angle-right text-primary mr-2"></i>Services</a>
+                    <a class="text-white" href="{% url 'contact' %}"><i class="fa fa-angle-right text-primary mr-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="font-weight-bold text-primary mb-4">Other Links</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="{% url 'terms' %}"><i class="fa fa-angle-right text-primary mr-2"></i>Terms & Conditions</a>
+                    <a class="text-white mb-2" href="{% url 'privacy' %}"><i class="fa fa-angle-right text-primary mr-2"></i>Privacy Policy</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="font-weight-bold text-primary mb-4">Get In Touch</h5>
+                <p>Contact Us And Get Your PowerUp Quota </p>
+                <!-- <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>123 Street, New York, USA</p> -->
+                <a class="text-white mb-2" href="tel:+252 610 821857 " ><p><i class="fa fa-phone-alt text-primary mr-2"></i>+252 610 821857</p></a>
+                <a class="text-white mb-2" href="tel:+971 544 384638" ><p><i class="fa fa-phone-alt text-primary mr-2"></i>+971 544 384638</p></a>
+                <a class="text-white mb-2" href="mailto:info@powerupassociation.com"><p><i class="fa fa-envelope text-primary mr-2"></i>info@powerupassociation.com</p></a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5">
+        <p class="m-0 text-center">
+            &copy; <a class="font-weight-semi-bold" href="{% url 'Home' %}">PowerUp Association</a>. All Rights Reserved.
+            
+        </p>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a id="back-to-top-btn" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <!--Loader script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 1500);
+    </script>
+    <script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
+        <script>
+          var wa_btnSetting = {"btnColor":"#FDAC53","ctaText":"Lets Chat","cornerRadius":40,"marginBottom":"45","marginLeft":20,"marginRight":"50","btnPosition":"left","whatsAppNumber":"252684096014","welcomeMessage":"Hello, I have a question","zIndex":999999,"btnColorScheme":"light"};
+          window.onload = () => {
+            _waEmbed(wa_btnSetting);
+          };
+        </script>
+      
+      
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/back.js' %}"></script>
+
+
+</body>
+
+</html>

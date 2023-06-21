@@ -1,0 +1,267 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PowerUp Association</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="About PowerUp Association, Our Vision & Mission" name="keywords">
+    <meta content="Discover about who are we and what's are our values" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    
+    <!--Loader css-->
+    <link rel="stylesheet" href="{% static 'css/loader.css' %}">
+</head>
+
+<style>
+        .gr {
+            text-align: center;
+            font-size: large;
+            margin-top: 10px;
+            margin-bottom: 60px;
+            margin-left: 221px;
+            user-select: none;
+        }
+        .ge {
+            text-align: center;
+            font-size: large;
+            margin-bottom: 10px;
+            margin-left: 100px;
+            user-select: none;
+        }
+        
+    </style>
+<body>
+    <!--Loader-->
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+        <!-- Navbar Start -->
+    <div class="container-fluid nav-bar p-0">
+        <div class="container-lg p-0">
+            <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
+                <div class="ge p-0 text-white d-lg-none">
+                    <a>بسم الله الرحمن الرحيم
+                    </a>
+                </div>
+                <a href="{% url 'Home' %}" class="navbar-brand">
+                    <h1 class="m-0 text-white display-4"><span class="text-primary">P</span>ower<span class="text-primary">U</span>p</h1>
+                </a>
+                <div class="gr p-0 text-white d-lg-flex d-none">
+                    <a>بسم الله الرحمن الرحيم
+                    </a>
+                </div>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="{% url 'Home' %}" class="nav-item nav-link">Home</a>
+                        <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
+                        <a href="{% url 'services' %}" class="nav-item nav-link">Services</a>
+                        <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+                        
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+    <style>
+        .page-header {
+            height: 400px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/static/img/c1.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        /* width */
+        ::-webkit-scrollbar {
+          width: 4px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+          
+          border-radius: 2px;
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #FDAC53; 
+          border-radius: 2px;
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #b30000; 
+        }
+    </style>
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5 mb-5">
+        <h1 class="display-4 text-white mb-3 mt-0 mt-lg-5">Latest Work</h1>
+        <div class="d-inline-flex text-white">
+            <p class="m-0">Projecs</p>
+            <p class="m-0 px-2">/</p>
+            <p class="m-0">Project Details</p>
+        </div>
+    </div>
+    <!-- Page Header Start -->
+
+
+    <!-- Detail Start -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Blog Detail Start -->
+            <div class="col-lg-8">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="{% static 'img/s1.PNG' %}" alt="">
+                </div>
+                <div class="pt-4 pb-2">
+                    <h2 class="font-weight-bold">Clinic Management System</h2>
+                </div>
+
+                <div class="mb-5">
+                    <p>Are you tired of managing your clinic's operations manually, with paper records and scattered data? Our Clinic Management System is here to help. This comprehensive solution streamlines all aspects of running a medical clinic, from patient management to appointment scheduling and employee tracking.</p>
+                    <p> One of the key features of our system is the patient database, which allows you to store and access all patient information in one place. This includes details about medical history, appointments, and treatment plans, making it easy for you to track patient visits and ensure that you are providing the best possible care. With our system, you can quickly and easily update patient records, schedule appointments, and track treatment plans, all with a few clicks.</p>
+                    <h2 class="mb-4">In addition to patient management</h2>
+                    <img class="img-fluid w-50 float-left mr-4 mb-3" src="{% static 'img/t1.png' %}" alt="Image">
+                    <p>our system includes a number of features that make it easier to run your clinic. The dashboard displays important data and metrics, such as patient count per year, appointment volume per month, and total revenue. This allows you to easily monitor the performance of your clinic and make informed decisions about how to optimize your operations. Our system also includes a logs feature that allows you to track user activity and monitor employee performance. This ensures that you have a clear understanding of what is happening within your clinic at all times. You can see which employees are logging in and out, and track their activity within the system. This is particularly helpful for monitoring employee productivity and ensuring that your clinic is running smoothly</p>
+                    <h3 class="mb-4">Our Clinic Management System is fast and reliable </h3>
+                    <img class="img-fluid w-50 float-right ml-4 mb-3" src="{% static 'img/t2.png' %}" alt="Image">
+                    <p>Built with Django as the backend, our Clinic Management System is fast and reliable, ensuring that you can manage your clinic efficiently and effectively. The system is also designed with great UI/UX in mind, making it easy for anyone to use. Whether you are a medical professional or an administrator, you will find our system intuitive and straightforward.
+
+                        Overall, our Clinic Management System is the perfect tool for streamlining your clinic's operations and providing the best possible care to your patients. With all of your data in one place and a range of powerful features at your fingertips, you can focus on what matters most: delivering top-quality care to your patients.</p>
+                </div>
+            </div>
+            <!-- Blog Detail End -->
+
+            <!-- Sidebar Start -->
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <!-- Image Start -->
+                <div class="border p-3 mb-5">
+                    <img src="{% static 'img/POWERUp_2.png' %}" alt="" class="img-fluid">
+                </div>
+                <!-- Image End -->
+
+                <!-- Plain Text Start -->
+                <div>
+                    <h3 class="font-weight-bold mb-4">PowerUp With Our Softwares </h3>
+                    <div class="border p-3">
+                        At PowerUp, we have the knowledge and expertise to provide top-quality products & services that meet the needs of our clients.
+
+Our team of professionals are dedicated to delivering exceptional service and support to our clients. Whether you are looking for specific product or service, we have the skills and experience to help you achieve your goals.
+
+We are committed to continuing to provide the best products & services in the industry. Contact us today to learn more about how we can help your business succeed
+                    </div>
+                </div>
+                <!-- Plain Text End -->
+            </div>
+            <!-- Sidebar End -->
+        </div>
+    </div>
+    <!-- Detail End -->
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white mt-5 pt-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="{% url 'Home' %}" class="navbar-brand">
+                    <h1 class="m-0 mt-n2 text-white display-4"><span class="text-primary">P</span>ower<span class="text-primary">U</span>p</h1>
+                    <h1 class="m-0 text-white display-7"><span class="text-primary">Association</span></h1>
+                </a>
+                <p>PowerUp Association is your IT solution provider that helps your business grow and prosper.</p>
+                <!-- <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+                </div> -->
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="font-weight-bold text-primary mb-4">Quick Links</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="{% url 'Home' %}"><i class="fa fa-angle-right text-primary mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right text-primary mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="{% url 'services' %}"><i class="fa fa-angle-right text-primary mr-2"></i>Services</a>
+                    <a class="text-white" href="{% url 'contact' %}"><i class="fa fa-angle-right text-primary mr-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="font-weight-bold text-primary mb-4">Other Links</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="{% url 'terms' %}"><i class="fa fa-angle-right text-primary mr-2"></i>Terms & Conditions</a>
+                    <a class="text-white mb-2" href="{% url 'privacy' %}"><i class="fa fa-angle-right text-primary mr-2"></i>Privacy Policy</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="font-weight-bold text-primary mb-4">Get In Touch</h5>
+                <p>Contact Us And Get Your PowerUp Quota </p>
+                <!-- <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>123 Street, New York, USA</p> -->
+                <a class="text-white mb-2" href="tel:+252 610 821857 " ><p><i class="fa fa-phone-alt text-primary mr-2"></i>+252 610 821857</p></a>
+                <a class="text-white mb-2" href="tel:+971 544 384638" ><p><i class="fa fa-phone-alt text-primary mr-2"></i>+971 544 384638</p></a>
+                <a class="text-white mb-2" href="mailto:info@powerupassociation.com"><p><i class="fa fa-envelope text-primary mr-2"></i>info@powerupassociation.com</p></a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5">
+        <p class="m-0 text-center">
+            &copy; <a class="font-weight-semi-bold" href="#">PowerUp Association</a>. All Rights Reserved.
+            
+        </p>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a id="back-to-top-btn" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <!--Loader script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 1500);
+    </script>
+    <script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
+        <script>
+          var wa_btnSetting = {"btnColor":"#FDAC53","ctaText":"Lets Chat","cornerRadius":40,"marginBottom":"45","marginLeft":20,"marginRight":"50","btnPosition":"left","whatsAppNumber":"252684096014","welcomeMessage":"Hello, I have a question","zIndex":999999,"btnColorScheme":"light"};
+          window.onload = () => {
+            _waEmbed(wa_btnSetting);
+          };
+        </script>
+      
+      
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/back.js' %}"></script>
+</body>
+
+</html>
